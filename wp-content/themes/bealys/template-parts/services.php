@@ -1,3 +1,5 @@
+<?php $img = get_template_directory_uri() . '/assets/images/services/'; ?>
+
 <section id="services" class="services-section">
     <div class="container">
         <div class="section-header">
@@ -12,7 +14,7 @@
             <!-- Service 1: Épicerie -->
             <div class="service-card">
                 <div class="service-image">
-                    <img src="assets/images/services/epicerie.jpg" alt="Épicerie africaine, caribéenne et latino" loading="lazy">
+                    <img src="<?php echo esc_url($img . 'epicerie.jpg'); ?>" alt="Épicerie africaine, caribéenne et latino" loading="lazy">
                 </div>
                 <h3>Épicerie africaine, caribéenne & latino</h3>
                 <p>Large sélection de produits frais, épices authentiques, poissons et produits de beauté afro.</p>
@@ -27,7 +29,7 @@
             <!-- Service 2: Traiteur -->
             <div class="service-card">
                 <div class="service-image">
-                    <img src="assets/images/services/traiteur.jpg" alt="Service traiteur" loading="lazy">
+                    <img src="<?php echo esc_url($img . 'traiteur.jpg'); ?>" alt="Service traiteur" loading="lazy">
                 </div>
                 <h3>Service traiteur</h3>
                 <p>Commandez vos plats africains et caribéens pour vos événements. Cuisine authentique préparée avec amour.</p>
@@ -42,7 +44,7 @@
             <!-- Service 3: Transfert d'argent Ria -->
             <div class="service-card">
                 <div class="service-image">
-                    <img src="assets/images/services/ria.jpg" alt="Transfert d'argent Ria" loading="lazy">
+                    <img src="<?php echo esc_url($img . 'ria.jpg'); ?>" alt="Transfert d'argent Ria" loading="lazy">
                 </div>
                 <h3>Transfert d'argent Ria</h3>
                 <p>Envoyez de l'argent rapidement et en toute sécurité vers plus de 160 pays à travers le monde.</p>

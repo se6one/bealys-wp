@@ -4,7 +4,7 @@
             <h2 class="section-title">Qui sommes-nous ?</h2>
             <div class="section-underline"></div>
         </div>
-        
+
         <div class="about-content">
             <div class="about-text">
                 <p class="lead">
@@ -59,9 +59,9 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="about-image">
-                <img src="assets/images/fresh-produce.jpg" alt="Marché Bealys - Façade du magasin" loading="lazy">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/fresh-produce.jpg'); ?>" alt="Marché Bealys - Façade du magasin" loading="lazy">
             </div>
         </div>
     </div>

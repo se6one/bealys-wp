@@ -1,3 +1,9 @@
+<?php
+$gallery     = get_template_directory_uri() . '/assets/images/gallery/';
+$maps_query  = urlencode(BEALYS_ADDRESS . ', ' . BEALYS_CITY);
+$phone_clean = preg_replace('/[^0-9+]/', '', BEALYS_PHONE);
+?>
+
 <section id="contact" class="contact-section">
     <div class="container">
         <div class="section-header">
@@ -7,7 +13,7 @@
                 Venez nous rendre visite, nous serons ravis de vous accueillir ! Stationnement gratuit disponible - Facile d'accès, une place se libère toujours.
             </p>
         </div>
-        
+
         <div class="contact-content">
             <div class="contact-info">
                 <div class="info-card">
@@ -19,17 +25,17 @@
                     </div>
                     <h3>Adresse</h3>
                     <p>
-                        <?php echo BUSINESS_ADDRESS; ?><br>
-                        <?php echo BUSINESS_CITY . ', ' . BUSINESS_PROVINCE; ?><br>
-                        <?php echo BUSINESS_POSTAL; ?>
+                        <?php echo esc_html(BEALYS_ADDRESS); ?><br>
+                        <?php echo esc_html(BEALYS_CITY . ', ' . BEALYS_PROVINCE); ?><br>
+                        <?php echo esc_html(BEALYS_POSTAL); ?>
                     </p>
-                    <a href="https://maps.google.com/?q=<?php echo urlencode(BUSINESS_ADDRESS . ', ' . BUSINESS_CITY); ?>" 
-                       target="_blank" 
+                    <a href="https://maps.google.com/?q=<?php echo esc_attr($maps_query); ?>"
+                       target="_blank"
                        class="btn btn-link">
                         Obtenir l'itinéraire
                     </a>
                 </div>
-                
+
                 <div class="info-card">
                     <div class="info-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -38,13 +44,13 @@
                     </div>
                     <h3>Téléphone & Email</h3>
                     <p>
-                        <a href="tel:<?php echo str_replace(['(', ')', ' ', '-'], '', BUSINESS_PHONE); ?>">
-                            <?php echo BUSINESS_PHONE; ?>
+                        <a href="tel:<?php echo esc_attr($phone_clean); ?>">
+                            <?php echo esc_html(BEALYS_PHONE); ?>
                         </a>
                     </p>
                     <p style="margin-top: 12px;">
-                        <a href="mailto:<?php echo BUSINESS_EMAIL; ?>">
-                            <?php echo BUSINESS_EMAIL; ?>
+                        <a href="mailto:<?php echo esc_attr(BEALYS_EMAIL); ?>">
+                            <?php echo esc_html(BEALYS_EMAIL); ?>
                         </a>
                     </p>
                 </div>
@@ -76,32 +82,22 @@
         <div class="contact-gallery">
             <div class="gallery-row gallery-row-right">
                 <div class="gallery-track">
-                    <img src="assets/images/gallery/gallery-1.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-2.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-3.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-4.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-5.jpg" alt="Marché Bealys" loading="lazy">
-                    <!-- Dupliquer pour boucle seamless -->
-                    <img src="assets/images/gallery/gallery-1.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-2.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-3.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-4.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-5.jpg" alt="Marché Bealys" loading="lazy">
+                    <?php for ($i = 1; $i <= 5; $i++): ?>
+                    <img src="<?php echo esc_url($gallery . 'gallery-' . $i . '.jpg'); ?>" alt="Marché Bealys" loading="lazy">
+                    <?php endfor; ?>
+                    <?php for ($i = 1; $i <= 5; $i++): ?>
+                    <img src="<?php echo esc_url($gallery . 'gallery-' . $i . '.jpg'); ?>" alt="Marché Bealys" loading="lazy">
+                    <?php endfor; ?>
                 </div>
             </div>
             <div class="gallery-row gallery-row-left">
                 <div class="gallery-track">
-                    <img src="assets/images/gallery/gallery-6.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-7.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-8.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-9.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-10.jpg" alt="Marché Bealys" loading="lazy">
-                    <!-- Dupliquer pour boucle seamless -->
-                    <img src="assets/images/gallery/gallery-6.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-7.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-8.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-9.jpg" alt="Marché Bealys" loading="lazy">
-                    <img src="assets/images/gallery/gallery-10.jpg" alt="Marché Bealys" loading="lazy">
+                    <?php for ($i = 6; $i <= 10; $i++): ?>
+                    <img src="<?php echo esc_url($gallery . 'gallery-' . $i . '.jpg'); ?>" alt="Marché Bealys" loading="lazy">
+                    <?php endfor; ?>
+                    <?php for ($i = 6; $i <= 10; $i++): ?>
+                    <img src="<?php echo esc_url($gallery . 'gallery-' . $i . '.jpg'); ?>" alt="Marché Bealys" loading="lazy">
+                    <?php endfor; ?>
                 </div>
             </div>
         </div>

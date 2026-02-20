@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/images/hero.png" alt="Bienvenue chez Marché Bealys" class="hero-photo">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero.png'); ?>" alt="Bienvenue chez Marché Bealys" class="hero-photo">
             </div>
         </div>
     </div>

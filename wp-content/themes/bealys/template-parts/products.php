@@ -1,3 +1,5 @@
+<?php $img = get_template_directory_uri() . '/assets/images/products/'; ?>
+
 <!-- Section 1: Galerie produits (fond gris) -->
 <section id="produits" class="products-section">
     <div class="container">
@@ -9,54 +11,36 @@
             </p>
         </div>
 
-        <!-- Galerie Masonry - Structure comme sur la capture -->
+        <!-- Galerie Masonry -->
         <div class="products-masonry">
-            <!-- ROW 1-2, COL 1-2: Grande image (Produits frais) -->
             <div class="masonry-item masonry-large" style="grid-column: 1 / 3; grid-row: 1 / 3;">
-                <img src="assets/images/products/produits-frais.jpg" alt="Produits frais" loading="lazy">
-                <div class="masonry-overlay">
-                    <h3>Produits frais</h3>
-                </div>
+                <img src="<?php echo esc_url($img . 'produits-frais.jpg'); ?>" alt="Produits frais" loading="lazy">
+                <div class="masonry-overlay"><h3>Produits frais</h3></div>
             </div>
 
-            <!-- ROW 1, COL 3: Poissons & fruits de mer -->
             <div class="masonry-item masonry-small" style="grid-column: 3; grid-row: 1;">
-                <img src="assets/images/products/fish.jpg" alt="Poissons et fruits de mer" loading="lazy">
-                <div class="masonry-overlay">
-                    <h3>Poissons & fruits de mer</h3>
-                </div>
+                <img src="<?php echo esc_url($img . 'fish.jpg'); ?>" alt="Poissons et fruits de mer" loading="lazy">
+                <div class="masonry-overlay"><h3>Poissons & fruits de mer</h3></div>
             </div>
 
-            <!-- ROW 2, COL 3: Épices & condiments -->
             <div class="masonry-item masonry-small" style="grid-column: 3; grid-row: 2;">
-                <img src="assets/images/products/spices.jpg" alt="Épices et condiments" loading="lazy">
-                <div class="masonry-overlay">
-                    <h3>Épices & condiments</h3>
-                </div>
+                <img src="<?php echo esc_url($img . 'spices.jpg'); ?>" alt="Épices et condiments" loading="lazy">
+                <div class="masonry-overlay"><h3>Épices & condiments</h3></div>
             </div>
 
-            <!-- ROW 3, COL 1: Épicerie sèche -->
             <div class="masonry-item masonry-small" style="grid-column: 1; grid-row: 3;">
-                <img src="assets/images/products/dry-goods.jpg" alt="Épicerie sèche" loading="lazy">
-                <div class="masonry-overlay">
-                    <h3>Épicerie sèche</h3>
-                </div>
+                <img src="<?php echo esc_url($img . 'dry-goods.jpg'); ?>" alt="Épicerie sèche" loading="lazy">
+                <div class="masonry-overlay"><h3>Épicerie sèche</h3></div>
             </div>
 
-            <!-- ROW 4, COL 1: Conserves -->
             <div class="masonry-item masonry-small" style="grid-column: 1; grid-row: 4;">
-                <img src="assets/images/products/canned.jpg" alt="Conserves" loading="lazy">
-                <div class="masonry-overlay">
-                    <h3>Conserves</h3>
-                </div>
+                <img src="<?php echo esc_url($img . 'canned.jpg'); ?>" alt="Conserves" loading="lazy">
+                <div class="masonry-overlay"><h3>Conserves</h3></div>
             </div>
 
-            <!-- ROW 3-4, COL 2-3: Grande image (Produits de beauté) -->
             <div class="masonry-item masonry-large" style="grid-column: 2 / 4; grid-row: 3 / 5;">
-                <img src="assets/images/products/beauty.jpg" alt="Produits de beauté" loading="lazy">
-                <div class="masonry-overlay">
-                    <h3>Produits de beauté</h3>
-                </div>
+                <img src="<?php echo esc_url($img . 'beauty.jpg'); ?>" alt="Produits de beauté" loading="lazy">
+                <div class="masonry-overlay"><h3>Produits de beauté</h3></div>
             </div>
         </div>
     </div>

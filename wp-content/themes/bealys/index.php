@@ -1,22 +1,14 @@
 <?php
 /**
- * Marché Bealys - Site vitrine
- * Page principale one-page
+ * Marché Bealys - Page principale one-page
  */
 
-// Chargement de la configuration
-require_once 'includes/config.php';
+get_header();
 
-// Header
-include 'includes/header.php';
+get_template_part('template-parts/hero');
+get_template_part('template-parts/products');
+get_template_part('template-parts/services');
+get_template_part('template-parts/about');
+get_template_part('template-parts/contact');
 
-// Modules / Sections
-include 'modules/hero.php';
-include 'modules/products.php';
-include 'modules/services.php';
-include 'modules/about.php';
-include 'modules/contact.php';
-
-// Footer
-include 'includes/footer.php';
-?>
+get_footer();
