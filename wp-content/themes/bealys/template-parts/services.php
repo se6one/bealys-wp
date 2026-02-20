@@ -1,4 +1,4 @@
-<?php $img = get_template_directory_uri() . '/assets/images/services/'; ?>
+<?php $img = content_url('uploads/bealys/services/'); ?>
 
 <section id="services" class="services-section">
     <div class="container">

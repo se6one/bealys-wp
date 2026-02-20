@@ -1,5 +1,5 @@
 <?php
-$gallery     = get_template_directory_uri() . '/assets/images/gallery/';
+$gallery     = content_url('uploads/bealys/gallery/');
 $maps_query  = urlencode(BEALYS_ADDRESS . ', ' . BEALYS_CITY);
 $phone_clean = preg_replace('/[^0-9+]/', '', BEALYS_PHONE);
 ?>

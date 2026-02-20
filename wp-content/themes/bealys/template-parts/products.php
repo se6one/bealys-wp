@@ -1,4 +1,4 @@
-<?php $img = get_template_directory_uri() . '/assets/images/products/'; ?>
+<?php $img = content_url('uploads/bealys/products/'); ?>
 
 <!-- Section 1: Galerie produits (fond gris) -->
 <section id="produits" class="products-section">

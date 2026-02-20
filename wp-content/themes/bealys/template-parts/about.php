@@ -61,7 +61,7 @@
             </div>
 
             <div class="about-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/fresh-produce.jpg'); ?>" alt="Marché Bealys - Façade du magasin" loading="lazy">
+                <img src="<?php echo esc_url(content_url('uploads/bealys/fresh-produce.jpg')); ?>" alt="Marché Bealys - Façade du magasin" loading="lazy">
             </div>
         </div>
     </div>
