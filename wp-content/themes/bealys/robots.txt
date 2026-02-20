@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bealys.ca/sitemap.xml
+
+# Disallow
+Disallow: /includes/
+Disallow: /modules/
+Disallow: /assets/js/

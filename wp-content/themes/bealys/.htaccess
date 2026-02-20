@@ -1,0 +1,5 @@
+# Marché Bealys - Configuration minimale
+# Version pour développement local uniquement
+
+# Désactiver l'affichage des répertoires
+Options -Indexes
